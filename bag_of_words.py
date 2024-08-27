@@ -19,8 +19,12 @@
 #Microsoft的流程图老赵说不行就白化了，花两个emb就行，画个fusion，过个gnn
 #写论文有一些专门的网站，也有一些还有就是微软够用了，实验matlab python都有
 
+'''
+在ade20k的abstract中会有82次
+'''
 from collections import Counter
 import re
+import torch
 
 def tokenize(text):
     """
@@ -57,16 +61,49 @@ def transform_corpus(corpus):
     bag_of_words_matrix = [bag_of_words(text, vocab) for text in corpus]
     return vocab, bag_of_words_matrix
 
+def bag_of_words_for_specific_vocab(text, specific_vocab):
+    """
+    将文本转换为特定词汇表的词袋向量。
+    """
+    tokens = tokenize(text)
+    word_counts = Counter(tokens)
+    vector = {word: word_counts.get(word, 0) for word in specific_vocab}
+    return vector
+
+graph=torch.load('/home/ubuntu/Sci-Retriever-V2/3d-point-cloud-classification-on-scanobjectnn.pt')
 # 示例使用
-corpus = [
-    "I love programming in Python.",
-    "Python programming is fun.",
-    "I love coding!"
-]
+corpus = graph.abstract #先start with abstract，如果能跑通再用content
 
-vocab, bow_matrix = transform_corpus(corpus)
+def general_matrix(corpus):
+    vocab, bow_matrix = transform_corpus(corpus)
 
-print("Vocabulary:", vocab)
-print("Bag of Words Matrix:")
-for vector in bow_matrix:
-    print(vector)
+    print("Vocabulary:", vocab)
+    print("Bag of Words Matrix:")
+    for vector in bow_matrix:
+        print(vector)
+
+def specific_matrix(corpus, specific_vocab):
+    bow_vectors = [bag_of_words_for_specific_vocab(text, specific_vocab) for text in corpus]
+
+    print("Specific Vocabulary:", specific_vocab)
+    print("Bag of Words for Specific Vocabulary:")
+    for vector in bow_vectors:
+        print(vector)
+
+def count_specific_words_in_corpus(corpus, specific_vocab):
+    """
+    计算特定词汇在整个语料库中出现的总次数。
+    """
+    total_counts = Counter()
+    
+    for text in corpus:
+        tokens = tokenize(text)
+        word_counts = Counter(tokens)
+        # 只累加特定词汇的词频
+        for word in specific_vocab:
+            total_counts[word] += word_counts.get(word, 0)
+    print("Total Word Counts for Specific Vocabulary:")
+    print(dict(total_counts))
+    return dict(total_counts)
+specific_vocab=['ade20k']
+count_specific_words_in_corpus(corpus, specific_vocab)
