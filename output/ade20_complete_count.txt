@@ -1,0 +1,46 @@
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper action-recognition-on-ava-v2-2:
+{'ade20k': 32}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper image-classification-on-objectnet:
+{'ade20k': 19}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper human-object-interaction-detection-on-hico:
+{'ade20k': 13}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper domain-adaptation-on-office-home:
+{'ade20k': 3}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper semantic-segmentation-on-pascal-voc-2012:
+{'ade20k': 31}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper 3d-point-cloud-classification-on-scanobjectnn:
+{'ade20k': 9}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper visual-question-answering-on-vqa-v2-test-dev:
+{'ade20k': 27}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper anomaly-detection-on-mvtec-ad:
+{'ade20k': 8}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper semantic-segmentation-on-s3dis:
+{'ade20k': 16}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper temporal-action-localization-on-thumos14:
+{'ade20k': 28}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper image-classification-on-svhn:
+{'ade20k': 5}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper action-recognition-in-videos-on-something-1:
+{'ade20k': 20}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper few-shot-image-classification-on-mini-2:
+{'ade20k': 0}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper few-shot-object-detection-on-ms-coco-10-shot:
+{'ade20k': 2}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper semantic-segmentation-on-nyu-depth-v2:
+{'ade20k': 28}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper semantic-segmentation-on-ade20k:
+{'ade20k': 82}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper action-recognition-in-videos-on-ucf101:
+{'ade20k': 3}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper object-detection-on-coco:
+{'ade20k': 42}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper text-to-image-generation-on-coco:
+{'ade20k': 9}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper weakly-supervised-object-detection-on-pascal-1:
+{'ade20k': 0}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper object-detection-on-coco-o:
+{'ade20k': 56}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper object-detection-on-coco-minival:
+{'ade20k': 55}
+Total Word Counts for Specific Vocabulary ['ade20k'] in paper fine-grained-image-classification-on-stanford:
+{'ade20k': 9}

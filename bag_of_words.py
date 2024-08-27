@@ -25,8 +25,11 @@
 from collections import Counter
 import re
 import torch
+import os
 
 def tokenize(text):
+    if not text:
+        return ""
     """
     将文本拆分为单词，并去除标点符号和特殊字符。
     """
@@ -70,10 +73,6 @@ def bag_of_words_for_specific_vocab(text, specific_vocab):
     vector = {word: word_counts.get(word, 0) for word in specific_vocab}
     return vector
 
-graph=torch.load('/home/ubuntu/Sci-Retriever-V2/3d-point-cloud-classification-on-scanobjectnn.pt')
-# 示例使用
-corpus = graph.abstract #先start with abstract，如果能跑通再用content
-
 def general_matrix(corpus):
     vocab, bow_matrix = transform_corpus(corpus)
 
@@ -102,8 +101,15 @@ def count_specific_words_in_corpus(corpus, specific_vocab):
         # 只累加特定词汇的词频
         for word in specific_vocab:
             total_counts[word] += word_counts.get(word, 0)
-    print("Total Word Counts for Specific Vocabulary:")
-    print(dict(total_counts))
+    
     return dict(total_counts)
-specific_vocab=['ade20k']
-count_specific_words_in_corpus(corpus, specific_vocab)
+
+folder_path = '/home/ubuntu/Sci-Retriever-V2/dataset/'
+for filename in os.listdir(folder_path):
+    file_path = os.path.join(folder_path, filename)
+    graph = torch.load(file_path)
+    corpus = graph.abstract #先start with abstract，如果能跑通再用content
+    specific_vocab=['ade20k']
+    total_count=count_specific_words_in_corpus(corpus, specific_vocab)
+    print(f"Total Word Counts for Specific Vocabulary {specific_vocab} in paper {filename[:-3]}:")
+    print(total_count)
