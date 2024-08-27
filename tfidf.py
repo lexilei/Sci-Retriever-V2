@@ -5,6 +5,7 @@ import nltk
 from collections import Counter
 import scipy.sparse as sp
 from numpy.linalg import norm
+import torch
 
 class TFIDF(object):
 
@@ -25,6 +26,7 @@ class TFIDF(object):
         self.norm_corpus = n_c(self.corpus)
 
     def tf(self):
+        self.preprocessing_text()
         words_array = [doc.split() for doc in self.norm_corpus]
         words = list(set([word for words in words_array for word in words]))
         features_dict = {w:0 for w in words}
@@ -36,23 +38,31 @@ class TFIDF(object):
             tf.append(bowf_doc)
         return pd.DataFrame(tf)
 
-    def df(self, tf):
+    def df(self):
+        tf=self.tf()
         features_names = list(tf.columns)
         df = np.diff(sp.csc_matrix(tf, copy=True).indptr)
         df = 1 + df
         return df
         
-    def idf(self, df):
+    def idf(self):
+        df=self.df()
         N = 1 + len(self.norm_corpus)
         idf = (1.0 + np.log(float(N) / df)) 
         idf_d = sp.spdiags(idf, diags= 0, m=len(df), n= len(df)).todense()      
         return idf, idf_d
 
-    def tfidf(self, tf, idf):        
+    def tfidf(self):    
+        tf=self.tf()
+        idf=self.idf()    
         tf = np.array(tf, dtype='float64')
         tfidf = tf * idf
         norms = norm(tfidf , axis=1)
         return (tfidf / norms[:,None])
     
 if __name__ == "__main__":
-    
+    nltk.download('stopwords')
+    nltk.download('punkt_tab')
+    graph = torch.load('/home/ubuntu/Sci-Retriever-V2/3d-point-cloud-classification-on-scanobjectnn.pt')
+    tf=TFIDF(graph.abstract)
+    print(tf.tfidf())

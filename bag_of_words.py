@@ -103,13 +103,13 @@ def count_specific_words_in_corpus(corpus, specific_vocab):
             total_counts[word] += word_counts.get(word, 0)
     
     return total_counts[word]
-
-folder_path = '/home/ubuntu/Sci-Retriever-V2/dataset/'
-specific_vocab=['coco minival']
-for filename in os.listdir(folder_path):
-    file_path = os.path.join(folder_path, filename)
-    graph = torch.load(file_path)
-    corpus = graph.abstract #先start with abstract，如果能跑通再用content
-    total_count=count_specific_words_in_corpus(corpus, specific_vocab)
-    print(f"Total Word Counts for Specific Vocabulary {specific_vocab} in paper {filename[:-3]}:")
-    print(total_count,len(graph.abstract),total_count/len(graph.abstract))
+if __name__ == "__main__":
+    folder_path = '/home/ubuntu/Sci-Retriever-V2/dataset/'
+    specific_vocab=['coco']
+    for filename in os.listdir(folder_path):
+        file_path = os.path.join(folder_path, filename)
+        graph = torch.load(file_path)
+        corpus = graph.content #先start with abstract，如果能跑通再用content
+        total_count=count_specific_words_in_corpus(corpus, specific_vocab)
+        print(f"Total Word Counts for Specific Vocabulary {specific_vocab} in paper {filename[:-3]}:")
+        print(total_count,len(graph.abstract),total_count/len(graph.abstract))
