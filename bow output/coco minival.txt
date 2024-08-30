@@ -1,0 +1,46 @@
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper action-recognition-on-ava-v2-2:
+0 777 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper image-classification-on-objectnet:
+0 468 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper human-object-interaction-detection-on-hico:
+0 293 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper domain-adaptation-on-office-home:
+0 465 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper semantic-segmentation-on-pascal-voc-2012:
+0 259 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper 3d-point-cloud-classification-on-scanobjectnn:
+0 421 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper visual-question-answering-on-vqa-v2-test-dev:
+0 461 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper anomaly-detection-on-mvtec-ad:
+0 245 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper semantic-segmentation-on-s3dis:
+0 504 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper temporal-action-localization-on-thumos14:
+0 847 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper image-classification-on-svhn:
+0 157 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper action-recognition-in-videos-on-something-1:
+0 555 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper few-shot-image-classification-on-mini-2:
+0 295 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper few-shot-object-detection-on-ms-coco-10-shot:
+0 174 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper semantic-segmentation-on-nyu-depth-v2:
+0 217 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper semantic-segmentation-on-ade20k:
+0 763 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper action-recognition-in-videos-on-ucf101:
+0 210 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper object-detection-on-coco:
+0 748 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper text-to-image-generation-on-coco:
+0 1014 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper weakly-supervised-object-detection-on-pascal-1:
+0 70 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper object-detection-on-coco-o:
+0 853 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper object-detection-on-coco-minival:
+0 737 0.0
+Total Word Counts for Specific Vocabulary ['coco minival'] in paper fine-grained-image-classification-on-stanford:
+0 596 0.0

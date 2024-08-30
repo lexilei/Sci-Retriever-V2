@@ -1,3 +1,0 @@
-Total Word Counts for Specific Vocabulary:
-Sci-Retriever-V2/semantic-segmentation-on-ade20k.pt  {'ade20k': 82}
-Sci-Retriever-V2/3d-point-cloud-classification-on-scanobjectnn.pt {'ade20k': 9}
